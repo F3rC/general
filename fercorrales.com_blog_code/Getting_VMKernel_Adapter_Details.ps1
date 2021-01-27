@@ -1,5 +1,7 @@
 ﻿#Code for blog post "Getting VMKernel Adapter Details in vCenter with PowerCLI" - https://fercorrales.com/?p=115
 
+##### Create a connection to a vCenter here (if not yet connected) #####
+
 $vHosts = Get-VMHost | Sort-Object Name
 
 #Begin first loop
@@ -26,3 +28,5 @@ foreach ($vHost in $vHosts) {
     }#End second / nested loop
     
 }#End first loop
+
+##### Disconnect from vCenter if connection is no longer needed #####
