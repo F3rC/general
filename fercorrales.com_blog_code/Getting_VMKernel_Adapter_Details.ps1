@@ -1,9 +1,13 @@
-﻿$vHosts = Get-VMHost | Sort-Object Name
+﻿#Code for blog post "Getting VMKernel Adapter Details in vCenter with PowerCLI" - https://fercorrales.com/?p=115
 
+$vHosts = Get-VMHost | Sort-Object Name
+
+#Begin first loop
 foreach ($vHost in $vHosts) {
     $VMHost = $vHost.Name
     $vmks = $vHost | Get-VMHostNetwork | Select-Object -ExpandProperty VirtualNic | Sort-Object Name
 
+    #Begin second / nested loop
     foreach ($vmk in $vmks) {
         $VmkObjct = [pscustomobject] @{'VMHost' = $vmk.VMHost
                                   'DeviceName' = $vmk.DeviceName
@@ -19,6 +23,6 @@ foreach ($vHost in $vHosts) {
     
     Write-Output $VmkObjct
 
-    }
+    }#End second / nested loop
     
-}
+}#End first loop
