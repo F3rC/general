@@ -1,4 +1,7 @@
-﻿Function Search-DatastoreItem {
+﻿<# Code for blog post "Getting VMKernel Adapter Details in vCenter with PowerCLI"
+https://fercorrales.com/function-search-datastores-for-files-with-powercli-psprovider-vimdatastore #>
+
+Function Search-DatastoreItem {
 
 <#
 .SYNOPSIS
@@ -56,6 +59,9 @@ List of files and folders displaying filename, datastore path and item type.
  8. Use the Datastore parameter or its alias, DS in order to specify one or more Datastores to search. Type
     their names separated by commas.
 #>
+
+
+##### Create a connection to a vCenter here (if not yet connected) #####
 
     [CmdletBinding()]
     param (

@@ -1,4 +1,5 @@
-﻿#Code for blog post "Getting VMKernel Adapter Details in vCenter with PowerCLI" - https://fercorrales.com/?p=115
+﻿<# Code for blog post "Getting VMKernel Adapter Details in vCenter with PowerCLI"
+https://fercorrales.com/getting-vmkernel-port-vmk-details-in-vcenter-with-powercli #>
 
 ##### Create a connection to a vCenter here (if not yet connected) #####
 
