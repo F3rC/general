@@ -1,4 +1,4 @@
-﻿<# Code for blog post "Getting VMKernel Adapter Details in vCenter with PowerCLI"
+﻿<# Code for blog post "Function: Search Datastores for Files with PowerCLI PSProvider (vimdatastore)"
 https://fercorrales.com/function-search-datastores-for-files-with-powercli-psprovider-vimdatastore #>
 
 Function Search-DatastoreItem {
