@@ -18,7 +18,7 @@ $IntervalSecs = $IntervalMins * 60
 $CPUSumStats = Get-Stat -Stat cpu.ready.summation -Entity $Entity -Start $StartDate -Finish $EndDate -IntervalMins $IntervalMins
 
 <#Transform each cpu.ready.summation value into CPU Ready Time percentage,
-creates an object with the Entity, CPUReadyTime and TimeStamp#>
+creates an object with the Entity, CPUReadyTime and TimeStamp properties#>
 foreach ($Stat in $CPUSumStats) {
     
     #Formula
