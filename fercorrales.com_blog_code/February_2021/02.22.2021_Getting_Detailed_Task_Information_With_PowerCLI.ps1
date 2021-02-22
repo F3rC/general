@@ -50,13 +50,13 @@ Retrieves detailed information for task with Id 'Task-task-1511207'.
         
         [Parameter (ParameterSetName = 'Status')]
         [Parameter (ParameterSetName = 'Id')]
-            [string]$Entity = '*',
+            [string]$Entity,
             <#Default Entity value set to * to ensure results include all
             entities when omitted in the command.#>
         
         [Parameter (ParameterSetName = 'Status')]
         [Parameter (ParameterSetName = 'Id')]
-            [string]$Username = '*'
+            [string]$Username
             <#Default Username value set to * to ensure results include
             all entities when omitted in the command.#>
     )
