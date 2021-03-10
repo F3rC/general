@@ -1,4 +1,7 @@
-﻿#region credentials / authentication
+﻿<# Code for blog post "Replicating VMware NSX-T Services with REST API and PowerShell"
+https://fercorrales.com/replicating-vmware-nsx-t-services-with-rest-api-and-powershell #>
+
+#region credentials / authentication
 $DstNSXTServer = 'https://mynsxtsrc.org'
 $SrcNSXTServer = 'https://mynsxtdst.org'
 
