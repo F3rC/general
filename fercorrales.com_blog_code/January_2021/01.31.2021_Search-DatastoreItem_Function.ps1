@@ -79,7 +79,7 @@ List of files and folders displaying filename, datastore path and item type.
 
         #Variable required to count loop executions. Used to calculate progress in 'Write-Progress' below.
         $Counter = 0
-
+        $ResultSet = @()
     }
     
     PROCESS {
@@ -100,7 +100,7 @@ List of files and folders displaying filename, datastore path and item type.
 
             Set-Location $DS
 
-            Get-ChildItem -Filter $Expression -Recurse | Select-Object Name,FolderPath,ItemType | Format-Table -AutoSize
+            $ResultSet += Get-ChildItem -Filter $Expression -Recurse 
 
             Write-Verbose "Done with $DS"
 
@@ -113,6 +113,8 @@ List of files and folders displaying filename, datastore path and item type.
 
     } #PROCESS
 
-    END {}
+    END {
+        return $ResultSet
+    }
 
 } #Function
